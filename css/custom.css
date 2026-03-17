@@ -1,0 +1,20 @@
+/* 侧边栏所有卡片的透明度 */
+#aside-content .card-widget {
+    background: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* 首页文章卡片的透明度 */
+#recent-posts > .recent-post-item {
+    background: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* 文章页/独立页面背景的透明度 */
+.layout_post > #post,
+.layout_page > div:first-child:not(.recent-posts) {
+    background: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* 页脚透明度 */
+#footer {
+    background: rgba(255, 255, 255, 0.1) !important;
+}
