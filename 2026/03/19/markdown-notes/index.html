@@ -1,0 +1,298 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>小白的入门笔记教学（markdown） | Redeem</title><meta name="author" content="Senuchy"><meta name="copyright" content="Senuchy"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="小白的markdown语言用法检索">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小白的入门笔记教学（markdown）">
+<meta property="og:url" content="https://senuchy.github.io/2026/03/19/markdown-notes/index.html">
+<meta property="og:site_name" content="Redeem">
+<meta property="og:description" content="小白的markdown语言用法检索">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://senuchy.github.io/img/avatar.jpg">
+<meta property="article:published_time" content="2026-03-19T12:10:00.000Z">
+<meta property="article:modified_time" content="2026-04-24T12:11:28.598Z">
+<meta property="article:author" content="Senuchy">
+<meta property="article:tag" content="markdown">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://senuchy.github.io/img/avatar.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "小白的入门笔记教学（markdown）",
+  "url": "https://senuchy.github.io/2026/03/19/markdown-notes/",
+  "image": "https://senuchy.github.io/img/avatar.jpg",
+  "datePublished": "2026-03-19T12:10:00.000Z",
+  "dateModified": "2026-04-24T12:11:28.598Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Senuchy",
+      "url": "https://Senuchy.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://senuchy.github.io/2026/03/19/markdown-notes/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '小白的入门笔记教学（markdown）',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><!-- hexo injector head_end start --><link rel="stylesheet" href="/Blog-Like/style.css">
+<script src="/Blog-Like/Blog-Like.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head><body><div class="bg-animation" id="web_bg" style="background-image: url(/img/index_cover1.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-atom"></i><span> Blogs</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/notes/"><i class="fa-fw fas fa-book-open"></i><span> Notes</span></a></li><li><a class="site-page child" href="/categories/essays/"><i class="fa-fw fas fa-journal-whills"></i><span> Essays</span></a></li><li><a class="site-page child" href="/categories/projects/"><i class="fa-fw fas fa-code"></i><span> Projects</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-carrot"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="/friends/"><i class="fa-fw fas fa-link"></i><span> Friends</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/img/favicon.png" alt="Logo"><span class="site-name">Redeem</span></a><a class="nav-page-title" href="/"><span class="site-name">小白的入门笔记教学（markdown）</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-atom"></i><span> Blogs</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/notes/"><i class="fa-fw fas fa-book-open"></i><span> Notes</span></a></li><li><a class="site-page child" href="/categories/essays/"><i class="fa-fw fas fa-journal-whills"></i><span> Essays</span></a></li><li><a class="site-page child" href="/categories/projects/"><i class="fa-fw fas fa-code"></i><span> Projects</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-carrot"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="/friends/"><i class="fa-fw fas fa-link"></i><span> Friends</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">小白的入门笔记教学（markdown）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-03-19T12:10:00.000Z" title="发表于 2026-03-19 20:10:00">2026-03-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-04-24T12:11:28.598Z" title="更新于 2026-04-24 20:11:28">2026-04-24</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/notes/">notes</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>好了，这篇只是我用来占位的符号！顺便教一下自己如何使用markdown语言罢了，用来对照的。</p>
+<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><p><a href="#%E5%BC%95%E7%94%A8">引用</a><br><a href="#%E5%88%97%E8%A1%A8">列表</a><br><a href="#%E4%BB%BB%E5%8A%A1">任务</a><br><a href="#%E4%BB%A3%E7%A0%81%E5%9D%97">代码块</a><br><a href="#%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F">数学公式</a></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">引用</span>](<span class="link">#引用</span>)</span><br><span class="line">[<span class="string">列表</span>](<span class="link">#列表</span>)</span><br><span class="line">[<span class="string">任务</span>](<span class="link">#任务</span>)</span><br><span class="line">[<span class="string">代码块</span>](<span class="link">#代码块</span>)</span><br><span class="line">[<span class="string">数学公式</span>](<span class="link">#数学公式</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><blockquote>
+<p>效果展示</p>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; 效果展示</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><ol>
+<li>效果展示</li>
+</ol>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> 效果展示</span><br></pre></td></tr></table></figure>
+<ul>
+<li>效果展示</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> 效果展示</span><br></pre></td></tr></table></figure>
+<h3 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h3><ul>
+<li><input disabled="" type="checkbox"> 作业</li>
+<li><input checked="" disabled="" type="checkbox"> 上课</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> [ ] 作业</span><br><span class="line"><span class="bullet">-</span> [x] 上课</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hello world！</span><br></pre></td></tr></table></figure>
+<h2 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h2><p>用”$$”转行”$$”<br>$$<br>y&#x3D; 2\sqrt{a}x<br>$$<br>用” $ “+公式+” $ “</p>
+<p>$\theta&#x3D;x^2$</p>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><table>
+<thead>
+<tr>
+<th align="left">姓名</th>
+<th align="right">who</th>
+<th align="center">1</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">张</td>
+<td align="right">zhang</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="left">李</td>
+<td align="right">li</td>
+<td align="center">4</td>
+</tr>
+</tbody></table>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|姓名|who|1|</span><br><span class="line">|:---|---:|:---:|</span><br><span class="line">|张|zhang|3|</span><br><span class="line">|李|li|4|</span><br></pre></td></tr></table></figure>
+<h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><p>脚注咋注不出来”[^”+”zhushi”+”]”</p>
+<p>[ ^出来 ] : 啥意思、啥意思、啥意思</p>
+<p>脚注咋注不出来<a href="%E5%95%A5%E6%84%8F%E6%80%9D%E3%80%81%E5%95%A5%E6%84%8F%E6%80%9D%E3%80%81%E5%95%A5%E6%84%8F%E6%80%9D">^4</a></p>
+<h2 id="横线"><a href="#横线" class="headerlink" title="横线"></a>横线</h2><hr>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">---</span><br></pre></td></tr></table></figure>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p><a href="baidu.com" title="一个垃圾的搜索引擎">百度</a></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">百度</span>](<span class="link">baidu.com &quot;一个垃圾的搜索引擎&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="引用链接"><a href="#引用链接" class="headerlink" title="引用链接"></a>引用链接</h2><p><a href="baidu.com" title="一个111的搜索引擎">百度</a></p>
+<p><a href="Google.com" title="一个222的搜索引擎">谷歌</a></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">百度</span>][<span class="symbol">id</span>]</span><br><span class="line">[<span class="symbol">id</span>]: <span class="link">baidu.com &quot;一个111的搜索引擎&quot;</span></span><br><span class="line">[<span class="string">谷歌</span>][<span class="symbol">2</span>]</span><br><span class="line">[<span class="symbol">2</span>]: <span class="link">Google.com &quot;一个222的搜索引擎&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="链接设置到标题"><a href="#链接设置到标题" class="headerlink" title="链接设置到标题"></a>链接设置到标题</h2><p>请参考<a href="#%E4%BA%94%E7%BA%A7%E6%A0%87%E9%A2%98">标题</a></p>
+<h2 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h2><p><a target="_blank" rel="noopener" href="http://www.baidu.com/">http://www.baidu.com</a></p>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p><img src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" alt="百度" title="百度搜索"></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">百度</span>](<span class="link">https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png &quot;百度搜索&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>如果是本地地址那么可以写<strong>本地图片的相对地址或者绝对地址</strong></p>
+<p><img src="/source/img/favicon.png" alt="本地图片"></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">本地图片</span>](<span class="link">/source/img/favicon.png</span>)</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h2><p><em>斜体</em></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="emphasis">*斜体*</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="加粗"><a href="#加粗" class="headerlink" title="加粗"></a>加粗</h2><p><strong>AAA</strong></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**AAA**</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="行内代码"><a href="#行内代码" class="headerlink" title="行内代码"></a>行内代码</h2><p>“<code>&quot;+代码+&quot;</code>“<br><code>printf()</code></p>
+<h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h2><p><u>下划线</u></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">u</span>&gt;</span>下划线<span class="tag">&lt;/<span class="name">u</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="标准的表情符号"><a href="#标准的表情符号" class="headerlink" title="标准的表情符号"></a>标准的表情符号</h2><p>smile?</p>
+<h2 id="下标"><a href="#下标" class="headerlink" title="下标"></a>下标</h2><p>H<del>2</del>O?</p>
+<h2 id="上标"><a href="#上标" class="headerlink" title="上标"></a>上标</h2><p>X^2^?</p>
+<h2 id="高亮文字"><a href="#高亮文字" class="headerlink" title="高亮文字"></a>高亮文字</h2><p>&#x3D;&#x3D;这是一段高亮文字&#x3D;&#x3D;?</p>
+<h2 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h2></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://Senuchy.github.io">Senuchy</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://senuchy.github.io/2026/03/19/markdown-notes/">https://senuchy.github.io/2026/03/19/markdown-notes/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://Senuchy.github.io" target="_blank">Redeem</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/markdown/">markdown</a></div><div class="post-share"><div class="social-share" data-image="/img/avatar.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2026/04/21/ai-job-matcher/" title="ai人岗匹配小助手"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">ai人岗匹配小助手</div></div><div class="info-2"><div class="info-item-1">为什么想做这个项目目前是大四的应届生，还没想好要不要接着读研，很难从学生思维转换出来，不明白如何求职，遂找了一个做ai领域的猎头实习看看市场和前沿方向都在干什么。 在过程中，一方面是了解到了现在的ai市场前沿的方向和岗位信息，一方面每天在人才mapping上面花大量的时间，作为新手没有技术背景却每天都要找人才去判断他可能适合哪个岗位。 痛点 看不懂技术背景人选简历（开发、算法、前端、后端、服务端、平台） 不能直观找到岗位汇总信息（公司太多、岗位很杂、不知道哪个合适） 每天在各类招聘网站mapping很长时间找不到目标人才  如何解决 用向量对比语义相似度  （比如他说自己做agent问答系统，那么和agent开发岗位需求会语义度更相似，虽然非常粗糙）  ai评分语义匹配度前5  （因为人不能至少不应该同时在5家进入流程，那也太累了，选几个合适的核心准备就够了，和我应届生海投当然不一样，哈哈哈）  最后输出前3岗位的评分及维度分析  （这样token不会用特别多，反正免费一百万暂时用不完，对于个人用户来说） 还在改进这部分其实会实时更新在readme里面，希望能够把这个产品再落地更...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Senuchy</div><div class="author-info-description">可以写尽万物,唯独不能写尽自己</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Senuchy"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/Senuchy" target="_blank" title="GitHub"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://space.bilibili.com/289902770" target="_blank" title="bilibili"><i class="fab fa-bilibili" style="color: #EE827C;"></i></a><a class="social-icon" href="https://steamcommunity.com/profiles/76561199691309412/" target="_blank" title="Steam"><i class="fab fa-steam" style="color: #171a21;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">Still building !</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95"><span class="toc-number">1.</span> <span class="toc-text">目录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E7%94%A8"><span class="toc-number">1.1.</span> <span class="toc-text">引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E8%A1%A8"><span class="toc-number">1.2.</span> <span class="toc-text">列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1"><span class="toc-number">1.3.</span> <span class="toc-text">任务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="toc-number">1.4.</span> <span class="toc-text">代码块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F"><span class="toc-number">1.5.</span> <span class="toc-text">数学公式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC"><span class="toc-number">1.6.</span> <span class="toc-text">表格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%84%9A%E6%B3%A8"><span class="toc-number">1.7.</span> <span class="toc-text">脚注</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%AA%E7%BA%BF"><span class="toc-number">1.8.</span> <span class="toc-text">横线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5"><span class="toc-number">1.9.</span> <span class="toc-text">链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E7%94%A8%E9%93%BE%E6%8E%A5"><span class="toc-number">1.10.</span> <span class="toc-text">引用链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5%E8%AE%BE%E7%BD%AE%E5%88%B0%E6%A0%87%E9%A2%98"><span class="toc-number">1.11.</span> <span class="toc-text">链接设置到标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#URL"><span class="toc-number">1.12.</span> <span class="toc-text">URL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87"><span class="toc-number">1.13.</span> <span class="toc-text">图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%9C%E4%BD%93"><span class="toc-number">1.14.</span> <span class="toc-text">斜体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A0%E7%B2%97"><span class="toc-number">1.15.</span> <span class="toc-text">加粗</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%8C%E5%86%85%E4%BB%A3%E7%A0%81"><span class="toc-number">1.16.</span> <span class="toc-text">行内代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E5%88%92%E7%BA%BF"><span class="toc-number">1.17.</span> <span class="toc-text">下划线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E5%87%86%E7%9A%84%E8%A1%A8%E6%83%85%E7%AC%A6%E5%8F%B7"><span class="toc-number">1.18.</span> <span class="toc-text">标准的表情符号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E6%A0%87"><span class="toc-number">1.19.</span> <span class="toc-text">下标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E6%A0%87"><span class="toc-number">1.20.</span> <span class="toc-text">上标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E4%BA%AE%E6%96%87%E5%AD%97"><span class="toc-number">1.21.</span> <span class="toc-text">高亮文字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%86%E9%A2%91"><span class="toc-number">1.22.</span> <span class="toc-text">视频</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/24/html-notes/" title="小白的入门笔记教学（html）">小白的入门笔记教学（html）</a><time datetime="2026-04-24T12:00:00.000Z" title="发表于 2026-04-24 20:00:00">2026-04-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/21/magic-world/" title="Sen-游戏IP设定想法">Sen-游戏IP设定想法</a><time datetime="2026-04-21T14:08:00.000Z" title="发表于 2026-04-21 22:08:00">2026-04-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/21/ai-job-matcher/" title="ai人岗匹配小助手">ai人岗匹配小助手</a><time datetime="2026-04-21T13:42:00.000Z" title="发表于 2026-04-21 21:42:00">2026-04-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/03/19/markdown-notes/" title="小白的入门笔记教学（markdown）">小白的入门笔记教学（markdown）</a><time datetime="2026-03-19T12:10:00.000Z" title="发表于 2026-03-19 20:10:00">2026-03-19</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2026 By Senuchy</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div><div class="footer_custom_text">Senuchy</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><div class="aplayer no-destroy" data-id="464916877" data-server="netease" data-type="song" data-fixed="true" data-autoplay="true"> </div><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => {
+      try {
+        fn()
+      } catch (err) {
+        console.debug('Pjax callback failed:', err)
+      }
+    })
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      false
+        ? pjax.loadUrl('/404.html')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
